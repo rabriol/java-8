@@ -15,7 +15,7 @@ public class Exemplo_6_Streams {
         List<String> words = Arrays.asList("mineiro", "baiano", "paulistano");
         Stream<String> stream = words.stream();
 
-        stream.filter(x -> x.length() <= 6).forEach(System.out::println);
+        stream.filter(x -> x.length() <= 6).forEach(x -> System.out.println(x + ""));
 
         //even numbers
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
@@ -28,6 +28,12 @@ public class Exemplo_6_Streams {
         Stream<Book> streamBooks = books.stream();
 
         streamBooks.filter(b -> b.getNumberOfStars() > 3).map(Book::getTitle).forEach(System.out::println);
+
+        //exemplo concatenando Strings
+    }
+
+    public static void map_reduce_example() {
+        List<Long> values = Arrays.asList(20L, 30L, 40L, 50L);
     }
 }
 

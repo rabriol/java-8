@@ -5,17 +5,15 @@ package br.com.uol.exemplos;
  */
 public class Exemplo_2_Inferencias {
     public static void main(String[] m) {
-        new Test((a, b) -> a > b).execute(2, 3);
+        new Test().execute(2, 3, (a, b) -> { System.out.println("Antes de avaliar a expressão");
+                                            return a > b;});
+
+        new Test().execute(2, 3, (a, b) -> a > b);
     }
 }
 
 class Test {
-    private Testable testable;
-
-    public Test(Testable testable) {
-        this.testable = testable;
-    }
-    public void execute(int a, int b) {
+    public void execute(int a, int b, Testable testable) {
         System.out.println(testable.test(a, b));
     }
 }

@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by rafaeuoliveira on 11/2/14.
  */
-public class Exemplo_5_Method_Defender {
+public class Exemplo_5_Default_Method{
     public static void main(String[] a) {
         B b = new B();
 
